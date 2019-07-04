@@ -1,0 +1,12 @@
+---
+Body:
+  dec: "请求头信息"
+  parameters:
+    -
+      header: {
+                "Content-Type": "application/json",
+                "SOPHON-Auth-Token": auth_token
+
+      }
+    -
+      url: /selection/detailview

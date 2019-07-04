@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>${JOB_NAME}-第${BUILD_NUMBER}次构建日志</title>
+</head>
+
+
+<body leftmargin='8' marginwidth='0' topmargin='8' marginheight='4' offset='0'>
+    <table width='95%' cellpadding='0' cellspacing='0' style='font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif'>
+        <tr>
+            <td>(本邮件由JENKINS自动下发，请勿回复！)</td>
+        </tr>
+        <tr>
+            <td>
+                <h2><font color='#FF0000'>构建结果 - ${BUILD_STATUS}</font></h2>
+            </td>
+        </tr>
+        <tr>
+            <td><br />
+                <b><font color='#0B610B'>构建信息</font></b>
+                <hr size='2' width='100%' align='center' />
+            </td>
+        </tr>
+        <tr><a href='${PROJECT_URL}'>${PROJECT_URL}</a>
+            <td>
+                <ul>
+                    <li>项目名称：${PROJECT_NAME}</li>
+                    <li>项目地址：<a href='${GIT_URL}'>gitlab</a></li>
+                    <li>构建编号：${BUILD_NUMBER}</li>
+                    <li>用例总数：${TOTAL_CASE}</li>
+                    <li>触发原因：${REASON}</li>
+                    <li>耗费时间：${COST_TIME}</li>
+                    <li>图表结果：<a href='${ALLURE_URL}'>allure-result</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b><font color='#0B610B'>Failed Test Results</font></b>
+               <hr size='2' width='100%' align='center' />
+            </td>
+        </tr>
+ <tr>
+            <td>
+                <ul>
+                    ${FAILED_LIST}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b><font color='#0B610B'>Jenkins Console</font></b>
+                <hr size='2' width='100%' align='center' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <pre style='font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif'>${CONSOLE}</pre>
+                <br />
+            </td>
+
+        </tr>
+
+
+
+    </table>
+
+
+</body>
+</html>
